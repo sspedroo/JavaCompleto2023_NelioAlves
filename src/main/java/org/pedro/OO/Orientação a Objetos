@@ -1,0 +1,55 @@
+Programação Orientada a Objetos (POO) é um paradigma de programação que
+organiza o código em objetos, que combinam dados e comportamentos.
+Existem quatro principais pilares da POO:
+
+* Encapsulamento: Refere-se à capacidade de esconder detalhes de implementação e
+expor apenas as funcionalidades necessárias.
+Por exemplo, em Java, você pode usar modificadores de acesso
+(public, private, protected) para controlar o acesso aos membros de uma classe:
+
+class ContaBancaria {
+    private double saldo;
+
+    public void depositar(double valor) {
+        saldo += valor;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+}
+
+* Herança: Permite que uma classe herde propriedades e métodos de outra classe. Por exemplo:
+
+class Animal {
+    void fazerSom() {
+        System.out.println("Som do animal");
+    }
+}
+
+class Cachorro extends Animal {
+    void fazerSom() {
+        System.out.println("Latido do cachorro");
+    }
+}
+
+Polimorfismo: Permite que objetos de diferentes classes sejam tratados como objetos de uma classe comum. Por exemplo:
+
+Animal meuAnimal = new Cachorro();
+meuAnimal.fazerSom(); // Saída: Latido do cachorro
+
+
+Abstração: Permite criar classes abstratas que não podem ser instanciadas diretamente e
+definir métodos abstratos que devem ser implementados pelas subclasses. Por exemplo:
+
+abstract class Forma {
+    abstract double calcularArea();
+}
+
+class Circulo extends Forma {
+    double raio;
+
+    double calcularArea() {
+        return Math.PI * raio * raio;
+    }
+}

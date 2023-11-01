@@ -1,0 +1,29 @@
+BOXING
+
+É o processo de conversão de um objeto tipo valor para um objeto tipo referência compatível:
+
+int x = 20; ------> a variavel possui o valor 20
+
+Integer y = x; ----------> é feito o boxing onde na memória é criado o objeto contendo o valor de X
+e a variavel aponta para esse objeto
+
+________________________________________________________________________________________________________________________
+
+UNBOXING
+
+É o processo de conversão de um objeto tipo referência para um objeto tipo valor compatível, é o contrario do boxing:
+
+Integer int = 20; --------> a variavel aponta para a referencia em memoria do objeto
+
+int y = int; -------> a variavel tipo valor é criada atraves do objeto apontado
+
+________________________________________________________________________________________________________________________
+
+Wrapper classes
+
+São classes equivalentes aos tipos primitivos
+
+Boxing e unboxing é natural na linguagem
+
+- Uso comum: Campos de entidades em sistemas de informação
+   Pois tipos referência (classes) aceitam valor null e usufruem dos recursos OO

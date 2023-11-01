@@ -1,0 +1,53 @@
+TIPOS REFERÊNCIA
+
+Variáveis no qual o tipo são classes (ex: variavel client é do tipo cliente) devem ser compreendidas como um ponteiro
+para o espaço em memória onde o objeto está. Então é uma referencia de onde está o objeto
+
+Se eu tenho 2 variaveis, variavel Produto e variavel X. A variavel produto está apontando (fazendo referencia) a um
+objeto na memoria e a variavel X está recebendo a variavel produto (x = produto), logo a variavel X também irá apontar
+para o endereço de memória da variavel produto, ficaria mais ou menos assim:
+
+produto = new Product() -----> produto aponta pra endereço de memoria de onde o objeto está alocado
+
+x = produto ------> x aponta também pro mesmo local onde produto está apontando
+
+Ou seja, não passamos valor algum e sim apenas a referencia (posição) de memória do objeto
+
+
+-- Também é possivel em tipos de referência passar o valor "nulL" que dai aponta para ninguém/nada
+
+________________________________________________________________________________________________________________________
+
+TIPOS PRIMITIVOS
+
+Em Java, tipos primitivos são do tipos valor. Tipos valor são caixas e não ponteiros, ou seja, nas variaveis possuem o
+valor e não somente a referencia(apontamento).
+
+Se eu tenho 2 variaveis, X e Y e elas são do tipo primitivo, o esquema seria mais ou menos esse
+
+int x = 10; ------> a variavel realmente possui o valor 10
+int y = x;  ------> a variavel Y recebe um copia do valor que a variavel X contém
+
+Os tipos primitivos são:
+- int
+- float
+- double
+- char
+- boolean
+- long
+- short
+- byte
+
+________________________________________________________________________________________________________________________
+
+VALORES PADRÃO
+
+Quando alocamos (new) qualquer tipo estruturado (classe ou array), são atribuidos valores padrões aos seus elementos
+caso nada seja atribuido a eles.
+
+- números = 0
+- boolean = false
+- char = caractere código 0
+- objeto = null
+
+________________________________________________________________________________________________________________________

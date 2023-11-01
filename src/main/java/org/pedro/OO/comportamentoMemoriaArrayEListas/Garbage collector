@@ -1,0 +1,9 @@
+É um processo que automatiza o gerenciamento de memória de um programa em execução
+
+O garbage collector monitora os objetos alocados dinamicamente pelo programa (no heap), desalocando aqueles que não
+estão mais sendo utilizados
+
+Todo objeto sem referencia será desalocado pelo garbage collector em um futuro próximo (Quando for Referência)
+
+Quando o escopo acabar, todas as variaveis são desalocadas (Quando for tipo primitivo)
+

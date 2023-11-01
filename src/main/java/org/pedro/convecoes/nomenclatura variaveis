@@ -1,0 +1,14 @@
+Não pode começar com dígito: use letra ou _
+Não usar acentos ou til
+Não pode ter espaço em branco
+Use nomes que tenham significado
+
+Usar Camel Case em (ex: lastName) :
+- pacotes
+- atributos
+- métodos
+- variáveis e parâmetros
+
+Usar Pascal Case (ex: EmployeeService) :
+- classes
+
