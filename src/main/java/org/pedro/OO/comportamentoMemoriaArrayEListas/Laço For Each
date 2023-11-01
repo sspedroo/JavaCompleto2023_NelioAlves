@@ -1,0 +1,7 @@
+Sintaxe opcional e simplificada para percorrer coleções
+
+Sintaxe:
+
+    for(Tipo apelido : coleção) {
+        comandos
+    }
