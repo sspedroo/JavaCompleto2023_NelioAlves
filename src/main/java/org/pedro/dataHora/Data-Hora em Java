@@ -1,0 +1,89 @@
+CONCEITOS IMPORTANTES
+
+Data-[hora] local:
+ ano - mês - dia - [hora] sem fuso horário
+ [hora] opcional
+
+Data-hora global:
+ ano - mês - dia - hora com fuso horário
+
+Duração:
+ tempo decorrido entre duas data-horas
+
+________________________________________________________________________________________________________________________
+
+QUANDO USAR?
+
+Data-[hora] local:
+- Quando o momento exato não interessa a pessoas de outro fuso horário
+- Uso comum: sistema de região única, Excel.
+- Exemplos (Data de nascimento: 15/06/2001)
+           (Data-hora da venda: 13/08/2022 às 15:32) presumindo não interessar fuso horário
+
+
+Data-hora global:
+- Quando o momento exato interessa a pessoas de outro fuso horário
+- Uso comum: sistemas multi-região, web.
+- Exemplos: (Quando será o sorteio? 21/08/2022 às 20h (horário de São Paulo) )
+            (Quando o comentário foi postado? Há 17 minutos)
+            (Quando foi realizada a venda? 13/08/2022 às 15:32 (horário de São Paulo) )
+            (Início e fim do evento? 21/08/2022 às 14h até 16h (horário de São Paulo) )
+
+________________________________________________________________________________________________________________________
+
+PADRÃO ISO 8601
+
+Data-[hora] local:
+- 2022-07-21
+- 2022-07-21T14:52
+- 2022-07-22T14:52:09
+- 2022-07-22T14:52:08:4073
+
+Data-hora global:
+- 2022-07-23T14:52:09Z (Z = GMT de Londres)
+- 2022-07-23T14:52:09.254935Z
+- 2022-07-23T14:52:09-03:00 ("-" é o fuso horario de outro local, nesse caso de São Paulo)
+
+________________________________________________________________________________________________________________________
+
+OPERAÇÕES IMPORTANTES COM DATA-HORA
+
+Instanciação
+ - (agora) --> Data-hora
+ - Texto ISO 8601 --> Data-hora
+ - Texto formato customizado --> Data-hora
+ - Dia, mês, ano, [horário] --> Data-hora local
+
+FORMATAÇÃO
+ - Data-hora --> Texto ISO 8601
+ - Data-hora --> Texto formato customizado
+
+Obter dados de uma data-hora local
+ - Data-hora local ----> dia, mês, ano, horário
+
+Converter data-hora global para local
+ - Data-hora global, timezone (sistema local) ---> Data-hora local
+
+Cálculos com data-hora
+ - Data-hora +/- tempo ----> Data-hora
+ - Data-hora 1 , Data-hora 2 ----> Duração
+
+________________________________________________________________________________________________________________________
+
+PRINCIPAIS TIPOS JAVA (versão 8+)
+
+Data-Hora local
+ - LocalDate
+ - LocalDateTime
+
+Data-hora global
+ - Instant
+
+Duração
+ - Duration
+
+Outros
+ - Zoneid
+ - ChronoUnit
+
+________________________________________________________________________________________________________________________

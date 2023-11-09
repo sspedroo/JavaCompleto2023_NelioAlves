@@ -1,0 +1,13 @@
+Comandos para salvar primeira versão de um projeto no git hub
+
+git init //iniciando o repositorio git no arquivo
+
+git add . //adicionando tudo na area de stage
+
+git commit -m "Mensagem mensagem" //fazendo um commit com uma mensagem sobre
+
+git branch -M main //tendo a certeza que o nome da branch tem o nome de main
+
+git remote add origin git@github.com:usuario/repositorio.git //Associar o projeto local nosso com o projeto no github
+
+git push -u origin main //aqui envia o projeto local para o github

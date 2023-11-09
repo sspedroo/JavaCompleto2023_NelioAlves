@@ -1,0 +1,9 @@
+COMANDOS PARA SALVAR UM NOVO COMMIT
+
+git status
+
+git add .
+
+git commit -m "mensagem relacionado ao oq fez"
+
+git push

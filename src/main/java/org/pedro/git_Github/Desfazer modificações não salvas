@@ -1,0 +1,7 @@
+git status
+
+git reset
+
+git clean -df
+
+git checkout -- .

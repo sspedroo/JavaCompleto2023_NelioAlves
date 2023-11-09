@@ -1,0 +1,19 @@
+COMANDOS PARA CLONAR UM PROJETO
+
+git clone git@github.com:usuario/repositorio.git // se nao for ssh, então sera https
+
+cd pasta do projeto
+
+git add .
+
+git commit -m "Mensagem relacionada ao commit"
+
+git push
+
+________________________________________________________________________________________________________________________
+
+COMANDO PARA VERIFICAR HISTORICO DE VERSOES
+
+git log
+
+git log --oneline

@@ -1,0 +1,9 @@
+FLUXO
+
+status com alterações (modified, untracked e deleted) ----> staged ------> commited
+
+git status -----> git add . ---->>>> git commit -m "mensagem"
+
+
+git reset //tira todo mundo do staged
+
