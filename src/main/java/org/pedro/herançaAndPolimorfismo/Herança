@@ -1,0 +1,22 @@
+HERANÇA
+
+É um tipo de associação que permite que uma classe herde todos os dados e comportamentos de outra
+
+Definições importantes
+ *Vantagens
+  - Reuso
+  - Polimorfismo
+
+ *Sintaxe
+  - class A extends B
+
+HERANÇA PERMITE O REUSO DE ATRIBUTOS E MÉTODOS (dados e comportamento)
+
+
+DEFINIÇÕES IMPORTANTES
+
+- Relação "é-um"
+- Generalização/especialização
+- Superclasse (classe base) / subclasse (classe derivada)
+- Herança / extensão
+- Herança é uma associação entre classes (e não entre objetos)
