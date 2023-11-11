@@ -1,4 +1,4 @@
-package org.pedro.herançaAndPolimorfismo.entities;
+package org.pedro.herancaAndPolimorfismo.entities;
 
 import lombok.*;
 
@@ -13,7 +13,7 @@ public class Account {
     protected Double balance;
 
     public void withdraw (Double amount){
-        balance -= amount;
+        balance -= amount + 5.0;
     }
 
     public void deposit (Double amount){
