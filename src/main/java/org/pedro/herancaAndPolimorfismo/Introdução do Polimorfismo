@@ -1,10 +1,10 @@
 PILARES DA OOP
 
-Encapsulamento
+- Encapsulamento
 
-Herança
+- Herança
 
-Polimorfismo
+- Polimorfismo
 
 ________________________________________________________________________________________________________________________
 Em programação Orientada a Objetos, polimorfismo é recurso que permite que variáveis de um mesmo tipo mais genérico
@@ -16,3 +16,12 @@ Account y = new SavingAccount (1023, 'Maria', 0.01)
 
 x.withdraw(50.0)
 y.withdraw(50.0)
+
+________________________________________________________________________________________________________________________
+
+IMPORTANTE ENTENDER
+
+A Associação do tipo específico com o tipo genérico é feita em tempo de execução (upcasting)
+
+O compilador não sabe para qual tipo específico a chamada do método Withdraw está sendo feita (ele só sabe que são duas
+variáveis do tipo Account)

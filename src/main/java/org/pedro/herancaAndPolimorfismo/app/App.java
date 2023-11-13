@@ -46,5 +46,8 @@ public class App {
 
         x.withdraw(50.0);
         y.withdraw(50.0);
+
+        System.out.println(x.getBalance());
+        System.out.println(y.getBalance());
     }
 }
