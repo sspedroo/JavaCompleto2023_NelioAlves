@@ -1,0 +1,18 @@
+CLASSES ABSTRATAS
+
+São classes que não pode ser instanciadas
+
+É uma forma de garantir herança total: somente subclasses não abstratas
+podem ser instanciadas, mas nunca a superclasse abstrata
+
+**Na notação UML, nomes de classes abstratas são em italicos
+
+
+QUESTIONAMENTO
+
+Se a classe Account não pode ser instanciada, porque simplesmente não criar somente SavingsAccount e BusinessAccount?
+
+ Resposta:
+  - Reuso
+  - Polimorfismo: a superclasse genérica nos permite tratar de forma fácil e uniforme todos os tipos de conta, inclusive
+  com polimorfismo se for o caso. Por exemplo, você pode colocar todos tipos de contas em uma mesma coleção.
