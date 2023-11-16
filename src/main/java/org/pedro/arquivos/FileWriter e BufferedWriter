@@ -1,0 +1,7 @@
+FILE WRITER
+
+Cria/recria o arquivo: new FileWriter(path)
+
+Acrescente ao arquivo existente: new FileWriter(path, true)
+
+BufferedWriter (mais rápido)

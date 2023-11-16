@@ -1,0 +1,9 @@
+LER ARQUIVO TEXTO
+
+ Para ler arquivo texto se utilizam as seguintes classes:
+
+File - Representação abstrata de um arquivo e seu caminho
+
+Scanner - Leitor de texto
+
+IOException - Exception
