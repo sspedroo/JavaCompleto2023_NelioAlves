@@ -19,12 +19,12 @@ public class ContractService {
 
         for (int i = 0; i < months; i++){
             Double interest = paymentService.interest(installmentBeforeInterest, i + 1);
-            Double paymentFee = paymentService.paymentFee(interest);
+            Double paymentFee = paymentService.paymentFee(interest + installmentBeforeInterest);
 
-            Double totalWithInterest = interest + paymentFee;
+            Double totalWithInterestAndPaymentFee = installmentBeforeInterest + (interest + paymentFee);
 
 
-            Installment installment = new Installment(contract.getDate().plusMonths(i + 1), totalWithInterest);
+            Installment installment = new Installment(contract.getDate().plusMonths(i + 1), totalWithInterestAndPaymentFee);
             installments.add(installment);
         }
     }
