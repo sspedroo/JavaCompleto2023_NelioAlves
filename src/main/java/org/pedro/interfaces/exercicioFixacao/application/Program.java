@@ -38,7 +38,7 @@ public class Program {
         System.out.println("Parcelas: ");
         for (Installment installment : contract.getInstallments()){
             System.out.println(installment.getDueDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
-                    + " - " + installment.getAmount());
+                    + " - R$ " + installment.getAmount());
         }
 
         sc.close();

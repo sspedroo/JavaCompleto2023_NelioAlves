@@ -15,11 +15,13 @@ public class ContractService {
 
     public void processContract(Contract contract, Integer months){
         List<Installment> installments = contract.getInstallments();
-        double value = contract.getTotalValue() / months;
+        double installmentBeforeInterest = contract.getTotalValue() / months;
 
         for (int i = 0; i < months; i++){
-            Double interest = paymentService.interest(value, i + 1);
-            Double totalWithInterest = paymentService.paymentFee(interest);
+            Double interest = paymentService.interest(installmentBeforeInterest, i + 1);
+            Double paymentFee = paymentService.paymentFee(interest);
+
+            Double totalWithInterest = interest + paymentFee;
 
 
             Installment installment = new Installment(contract.getDate().plusMonths(i + 1), totalWithInterest);

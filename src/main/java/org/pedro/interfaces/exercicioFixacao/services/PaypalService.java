@@ -5,7 +5,7 @@ public class PaypalService implements OnlinePaymentService{
     //paymentFee = taxa de pagamento
     @Override
     public Double paymentFee(Double amount) {
-        return  amount + (amount * 0.02);
+        return  amount * 0.02;
     }
 
 
