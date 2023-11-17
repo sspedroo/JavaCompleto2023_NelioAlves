@@ -1,0 +1,35 @@
+ASPECTOS EM COMUM ENTRE HERANÇA E INTERFACES
+
+Relação é-um
+Gereralização / especialização
+Polimorfismo
+
+________________________________________________________________________________________________________________________
+DIFERENÇA FUNDAMENTAL
+
+Herança => reuso
+
+Interface => contrato a ser cumprido
+
+E se eu precisar implementar uma Herança como interface, porém também quiser definir uma estrutura comum reutilizável
+para todas as classes que herdam, exemplo:
+
+crio a interface:
+
+    public interface Shape {
+        Double area();
+    }
+
+dai crio uma classe abstrata com a estrutura que quero reutilizar:
+
+    public abstract class AbstractShape {
+        protected Color color;
+    }
+
+dai crio as classes que herdam da classe abstrata:
+
+    public class Circle extends Abstract Shape {
+
+
+    }
+

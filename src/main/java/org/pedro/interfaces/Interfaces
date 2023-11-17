@@ -6,6 +6,10 @@ ________________________________________________________________________________
 
 Interface é um tipo que define um conjunto de operações que uma classe deve implementar. A interface estabelece um
 contrato que a classe deve cumprir.
+- Interface não tem construtor
+- Interface não armezena estado
+- Interface não tem atributo
+
 
 Pra que interfaces?
  - Para criar sistemas com baixo acoplamento e flexíveis.
