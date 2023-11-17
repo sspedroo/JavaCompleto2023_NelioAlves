@@ -1,0 +1,45 @@
+Acoplamento fraco
+A classe não conhece a dependência concreta e sim a interface,
+Se a classe concreta mudar, a classe com o relacionamento não muda nada
+
+Então eu entendi como se eu colocasse um atributo generico do tipo Interface na minha classe e na hora de instanciar
+eu passo uma classe/objeto que implementa essa interface, assim será do mesmo tipo (upcasting)
+
+
+________________________________________________________________________________________________________________________
+
+   Injeção de dependência por meio de construtor
+
+class Program {
+       static void Main(String[] args){
+
+       (...)
+
+       RentalService = new RentalService (pricePerHour, pricePerDay, new BrazilTaxService());
+                                                                               |
+                                                                               |
+                                                                               |
+                                                                               |
+                                                                               |
+                                                                               |
+                                                                               |
+                                                                              ____
+                                                                               \/
+class RentalService {
+   private TaxService taxService;                                          (UPCASTING)
+       public RentalService(double pricePerHour, double pricePerDay, TaxService taxService){
+       this = ....
+       this = ....
+       this = ....
+   }
+________________________________________________________________________________________________________________________
+
+Inversão de controle
+ - Padrão de desenvolvimento que consiste em retirar da classe a responsabilidade de instanciar suas dependências.
+
+Injeção de dependência
+ - É uma forma de realizar a inversão de controle: um componente externo instancia a dependência, que é então injetada
+ no objeto "pai". Pode ser implementada de várias formas:
+     * Construtor
+     * Classe de instanciação (builder / factory)
+     * Container / framework
