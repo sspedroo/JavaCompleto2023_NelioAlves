@@ -1,0 +1,45 @@
+Generics delimitados, também conhecidos como generics com restrição, referem-se à capacidade de impor restrições
+específicas aos tipos de dados que podem ser usados como argumentos de tipo em uma classe ou método genérico.
+Essas restrições ajudam a fornecer maior flexibilidade e segurança de tipo ao usar generics.
+
+Existem dois tipos principais de generics delimitados em Java:
+ - Generics delimitados superiores (bounded wildcards)
+ - Generics delimitados inferiores (lower-bounded wildcards).
+________________________________________________________________________________________________________________________
+
+ **** Generics Delimitados Superiores (Upper Bounded Wildcards) ****
+
+Com generics delimitados superiores, você restringe os tipos que podem ser usados como argumentos de tipo
+para serem subtipos de uma classe específica ou implementar uma interface específica.
+Isso é feito usando o operador extends. Por exemplo:
+
+     public class ExemploGenerics<T extends Number> {
+         // ...
+     }
+
+Neste exemplo, T pode ser qualquer subtipo de Number.
+Portanto, você pode usar Integer, Double, Float etc., mas não pode usar tipos que não são subtipos de Number.
+
+________________________________________________________________________________________________________________________
+
+ **** Generics Delimitados Inferiores (Lower Bounded Wildcards) ****
+
+Com generics delimitados inferiores, você restringe os tipos que podem ser usados como argumentos de tipo
+para serem superiores a uma classe específica. Isso é feito usando o operador super. Por exemplo:
+
+    public class ExemploGenerics<T super Integer> {
+        // ...
+    }
+
+Neste exemplo, T pode ser Integer ou uma superclasse de Integer.
+Isso significa que você pode usar Number ou Object, por exemplo.
+
+________________________________________________________________________________________________________________________
+
+Também é possivel usar múltiplos bounds, combinando generics demilitados superiores e inferiores em uma única declaração
+Por exemplo:
+    public class ExemploGenerics<T extends Number & Comparable<T>> {
+        // ...
+    }
+
+Neste caso, T deve ser um subtipo de Number e também deve implementar a interface Comparable com o próprio tipo T.

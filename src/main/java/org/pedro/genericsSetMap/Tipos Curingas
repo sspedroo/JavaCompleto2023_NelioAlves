@@ -1,0 +1,43 @@
+GENERICS SÃO INVARIANTES
+
+List<Object> não é o supertipo de qualquer tipo de lista:
+
+List<Object> myObjs = new ArrayList<Object>();
+List<Integer> myNumbers = new ArrayList<Integer>();
+
+myObjs = myNumbers;  ---------------> Erro de compilação
+
+________________________________________________________________________________________________________________________
+
+O supertipo de qualquer tipo de lista é List<?>. Este é um tipo curinga:
+
+List<?> myObjs = new ArrayList<Object>();
+List<Integer> myNumbers = new ArrayList<Integer>();
+
+myObjs = myNumbers; ---------------> aceito
+
+________________________________________________________________________________________________________________________
+
+Com tipos curinga podemos fazer métodos que recebem um genérico de "qualquer tipo":
+
+   public static void main(String ... args) {
+        List<Integer> ints = Arrays.asList(5, 2, 10);
+        printList(ints):
+   }
+
+   public static void printList(List<?> list) {
+        for (Object obj : list) {
+            System.out.println(obj);
+        }
+   }
+________________________________________________________________________________________________________________________
+
+NÃO É POSSIVEL ADICIONAR DADOS A UMA COLEÇÃO DE TIPO CURINGA
+
+    public static void main(String ... args) {
+
+        List<?> list = new ArrayList<>();
+        list.add(3); ----------------------------> Erro de compilação
+    }
+
+O compilador não sabe qual é o tipo específico do qual a lista foi instanciada.

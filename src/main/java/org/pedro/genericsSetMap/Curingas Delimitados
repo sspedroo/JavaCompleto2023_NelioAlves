@@ -1,0 +1,18 @@
+SINTAXE
+
+public static double totalArea(List<? extends Shape> list)
+
+Isso está informando que a Lista pode ser shape ou de qualquer tipo que estende Shape
+ou seja, toda classe que estender de Shape também pode ser utilizada na lista
+
+________________________________________________________________________________________________________________________
+
+Covariância
+
+Get = Ok
+Put = Error
+
+Contravariância
+
+Get = Error
+Put = Ok

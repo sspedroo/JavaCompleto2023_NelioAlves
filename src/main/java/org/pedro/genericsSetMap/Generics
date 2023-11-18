@@ -1,0 +1,15 @@
+GENERICS
+
+Generics permitem que classes, interfaces e métodos possam ser parametrizados por tipo. Seus benefícios são:
+ - Reuso
+ - Type safety
+ - Perfomance
+
+
+Uso comum: coleções
+
+o " <> " é o generics
+
+List<String> list = new ArrayList<>();
+list.add("Maria");
+String name = list.get(0)
