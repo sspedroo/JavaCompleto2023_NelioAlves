@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class ExemplePredicate {
+public class ExamplePredicate {
     public static void main(String[] args) {
 
         List<Product> list = new ArrayList<>();

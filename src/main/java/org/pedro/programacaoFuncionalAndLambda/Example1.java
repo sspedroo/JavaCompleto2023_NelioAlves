@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Exemple1 {
+public class Example1 {
 
     public static void main(String[] args) {
 

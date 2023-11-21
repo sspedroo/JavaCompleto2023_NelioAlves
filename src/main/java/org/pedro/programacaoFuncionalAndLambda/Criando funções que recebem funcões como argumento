@@ -1,0 +1,9 @@
+RECORDANDO
+
+- removeIf (Predicate)
+- forEach (Consumer)
+- map (Function)
+
+
+Criamos uma função que passa um Predicate e na lógica da função usamos o test desse predicate. Quando chamamos a função
+passamos a lista e depois passamos a função (expressão lambda) do que queremos fazer.
