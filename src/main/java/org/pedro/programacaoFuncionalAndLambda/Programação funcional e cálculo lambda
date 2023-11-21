@@ -1,0 +1,18 @@
+PARADIGMAS DA PROGRAMAÇÃO
+
+- Imperativo (C, Pascal, Fortran, Cobol)
+
+- Orientado a Objetos (C++, Object Pascal, Java (<8), C#(<3))
+
+- Funcional (Haskell, Closure, Clean, Erlang)
+
+- Lógico (Prolog)
+
+- Multiparadigma (Javascript, Java (8+), C# (3+),
+
+
+________________________________________________________________________________________________________________________
+
+O que são "expressões lambda"?
+
+Em programação funcional, expressão lamba corresponde a uma função anônima de primeira classe.
