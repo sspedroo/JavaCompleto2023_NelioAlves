@@ -1,0 +1,31 @@
+VISÃO GERAL DO JDBC
+
+- JDBC (Java Database Connectivity): API padrão do Java para acesso a dados
+- Pacotes: java.sql e javax.sql (acredito eu que agora é jakarta, pelo menos o JPA é)
+
+________________________________________________________________________________________________________________________
+
+OPERAÇÃO BÁSICAS DA ÁLGEBRA RELACIONAL
+
+ - Restrição
+ - Projeção
+ - Produto cartesiano
+ - Junção (produto cartesiano + restrição de chaves correspondentes)
+
+
+Operação "produto cartesiano" = SELECT * FROM PRODUCT, CATEGORY
+
+
+Operação "junção" é um produto cartesiano mais uma restrição de chave estrangeira com chave primária
+Ex: SELECT * FROM PRODUCT, CATEGORY WHERE PRODUCT:CATEGORY_ID = CATEGORY.ID
+Ex: SELECT * FROM PRODUCT INNER JOIN CATEGORY cat ON PRODUCT.CATEGORY_ID = cat.ID
+
+Operação "restrição"
+Ex: SELECT * FROM PRODUCT INNER JOIN CATEGORY cat ON PRODUCT.CATEGORY_ID = cat.ID WHERE CATEGORY.NAME = 'Computers'
+
+Operação "projeção" é quando não queremos todos os campos da tabela
+Ex: SELECT PRODUCT.*, CATEGORY.NAME FROM PRODUCT INNER JOIN CATEGORY cat ON PRODUCT.CATEGORY_ID = cat.ID
+    WHERE CATEGORY.NAME = 'Computers'
+
+________________________________________________________________________________________________________________________
+
