@@ -1,17 +1,17 @@
 package com.educandoweb.course.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name = "tb_user")
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor()
 @Getter
 @Setter
 public class User {
@@ -22,6 +22,20 @@ public class User {
     private String email;
     private String phone;
     private String password;
+
+
+    @Setter(AccessLevel.NONE) //Aqui impedindo de set uma coleção (isso não existe)
+    @OneToMany(mappedBy = "client")
+    @JsonIgnore
+    private List<Order> orders = new ArrayList<>();
+
+    public User(Long id, String name, String email, String phone, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
+    }
 
     @Override
     public boolean equals(Object o) {
