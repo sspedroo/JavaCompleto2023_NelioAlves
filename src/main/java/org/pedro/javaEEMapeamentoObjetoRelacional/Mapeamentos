@@ -1,0 +1,7 @@
+ANOTAÇÕES JPA
+
+@Entity - indica que a classe é uma entidade no banco de dados
+@Id - indica que o atributo é a chave primária da tabela no banco de dados
+@GeneratedValue(strategy=GenerationType.IDENTITY) - faz com que o ID seja gerado automaticamente de 1 em 1
+
+@Column(name = "") - altera o nome da coluna no banco de dados

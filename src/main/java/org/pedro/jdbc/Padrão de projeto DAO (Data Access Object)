@@ -1,0 +1,22 @@
+IDEIA GERAL DO PADRÃO DAO:
+ - Para cada entidade, haverá um objeto responsável por fazer acesso a dados relacionado a esta entidade. Por exemplo:
+    - Cliente: ClienteDao
+    - Produto: ProdutoDao
+    - Pedido: PedidoDao
+
+ - Cada DAO será definido por uma interface.
+ - A injeção de dependência pode ser feita por meio do padrão de projeto Factory;
+
+________________________________________________________________________________________________________________________
+
+As interface DAO possui as ações de banco de dados em seu corpo, sendo assim que assume o contrato do DAO consegue
+definir sua forma de como implementar esses métodos de ações em banco de dados.
+
+Ex: public interface DepartmentDao {
+        void insert(Departament obj);
+        void update(Departament obj);
+        void deleteById(Integer id);
+        Department findById(Integer id);
+        List<Departament> findAll();
+    }
+

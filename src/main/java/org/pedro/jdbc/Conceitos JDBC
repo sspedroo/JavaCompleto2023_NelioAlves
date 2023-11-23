@@ -28,4 +28,23 @@ Ex: SELECT PRODUCT.*, CATEGORY.NAME FROM PRODUCT INNER JOIN CATEGORY cat ON PROD
     WHERE CATEGORY.NAME = 'Computers'
 
 ________________________________________________________________________________________________________________________
+DEMO: RECUPERAR DADOS
 
+API:
+    - Statement (montar um comando sql a ser executado)
+    - ResultSet:
+           - first() [move para a posição 1, se houver]
+           - beforeFirst() [move para posição 0]
+           - next() [move para o próximo, retorna false se já estiver no último]
+           - absolute(int) [move para a posição dada, lembrando que dados reais começam e 1]
+
+    OBS: o objeto ResultSet contém os dados armazenados na forma de tabela
+________________________________________________________________________________________________________________________
+DEMO: INSERIR DADOS
+
+API:
+    - PreparedStatement
+    - executeUpdate
+    - Statement.RETURN_GENERATED_KEYS
+    - getGeneratedKeys
+________________________________________________________________________________________________________________________
