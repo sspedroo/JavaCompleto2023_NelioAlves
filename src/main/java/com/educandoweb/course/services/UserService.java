@@ -21,4 +21,8 @@ public class UserService {
     public User findById(Long id){
         return repository.findById(id).orElseThrow(() -> new EntityNotFoundException("User not found."));
     }
+
+    public User insert(User entity){
+       return repository.save(entity);
+    }
 }
