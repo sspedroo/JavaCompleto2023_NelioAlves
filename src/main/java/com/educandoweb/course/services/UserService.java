@@ -25,4 +25,16 @@ public class UserService {
     public User insert(User entity){
        return repository.save(entity);
     }
+
+    public void delete(Long id){
+        repository.deleteById(id);
+    }
+
+    public User update(Long id, User user){
+        User reference = repository.getReferenceById(id); //so trás o objeto e monitora, só depois que faz ação
+        reference.setName(user.getName());
+        reference.setEmail(user.getEmail());
+        reference.setPhone(user.getPhone());
+        return repository.save(reference);
+    }
 }
