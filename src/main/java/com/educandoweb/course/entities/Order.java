@@ -52,6 +52,14 @@ public class Order {
         }
     }
 
+    public Double getTotal(){
+        Double sum = 0.0;
+        for(OrderItem oi : items){
+            sum += oi.getSubTotal();
+        }
+        return sum;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
